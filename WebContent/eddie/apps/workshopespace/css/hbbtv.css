@@ -1,0 +1,274 @@
+@media all {
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * Globaler Browser Reset
+ * 
+ * @section browser reset
+ * @see     http://meyerweb.com/eric/tools/css/reset/
+ *          v2.0 | 20110126
+ *          License: none (public domain)
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+    font-size: 0;  /* li spacing hack */
+}
+
+/* workaround for Maple 5 Browser */
+ol li, ul li {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    width: 1280px;
+    height: 720px;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+    font-size: 1em; /* 16px */
+    line-height: 1.125em; /* 18px */
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-align: left;
+    color: #fff;
+    letter-spacing: 0px;	
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+}
+
+body.y1970 {
+    background: url("/eddie/apps/workshopespace/img/rbb_hintergrund_1970.jpg") no-repeat top left;	
+}
+
+body.y1980 {
+     background: url("/eddie/apps/workshopespace/img/rbb_hintergrund_1980.jpg") no-repeat top left;
+}
+
+body.y1990 {
+     background: url("/eddie/apps/workshopespace/img/rbb_hintergrund_1990.jpg") no-repeat top left;	
+}
+
+#hbbtvlayout {
+	height: 720px;
+    position: relative;
+    text-align: center;
+}
+
+#tourtitle {
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1280px;
+    z-index: 3;
+    text-align: center;
+    color: #ae070f;
+    font-size: 2em;
+    padding: 50px 0 0 0;
+}
+
+.loading_wrapper {
+    display: block;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.loading_wrapper .loader {
+    height: 115px;
+    width: 115px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -57px;
+    margin-left: -57px;
+}
+
+#hbbtv-text-loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 33px;
+	overflow: none;
+	text-align: center;
+	font-size: 2em;
+	color: #ae070f;
+}
+
+/* The ghost, for centering buffering */
+#hbbtv-text-loading:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+	margin-top: 8em;
+}
+
+#display {
+	top: 0;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	overflow: hidden;
+	height: 620px;
+}
+
+.content_box {
+    position: relative;
+    height: 520px;
+    padding: 20px;
+    margin: 100px 40px 0 40px;
+    background-color: rgba(21, 45, 51, 0.7);
+}
+
+.shadow {
+    -webkit-box-shadow: black 0 2px 10px;
+    -moz-box-shadow: black 0 2px 10px;
+    box-shadow: black 0 2px 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 2px 10px;
+}
+
+#player {
+	background-color: #000000;
+    display: none;
+    height: 327px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    width: 582px;
+    display: block;
+}
+
+#video1 {
+	position: relative;
+	overflow: hidden;
+}
+
+.europeanahelper {
+	isplay: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#europeanaimage {
+	vertical-align: middle;
+}
+
+#europeana {
+	position: absolute;
+	top: 20px;
+	left: 620px;
+	right: 20px;
+	height: 327px;
+}
+
+#videoinformation {
+	position: absolute;
+	top:380px;
+	text-align: left;
+	font-size: 16px;
+}
+
+#videoheader {
+	position: relative;
+	top: 0;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.videotitle {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.videodate {
+	font-size: 24px;
+}
+
+#videodescription {
+	position: relative;
+	line-height: 25px;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * HbbTV Specific Styles
+ *
+ * @subsection hbbtv
+ */
+
+#hbbtv_objects_wrapper {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/**
+ * end media all
+ */
+}

@@ -100,25 +100,30 @@ public class TourPresentation {
 
 		posters = new ArrayList<String>();
 		
-		Object obj = JSONValue.parse(data);
-		JSONObject jsonObject = (JSONObject)obj;
-		System.out.println(jsonObject.getClass());
-		JSONObject temp = null;
-		for(Iterator i1 = jsonObject.keySet().iterator(); i1.hasNext();) {
-			String key = (String) i1.next();
-			if (key.equals("chapters")) {
-				JSONArray chapters = (JSONArray)jsonObject.get(key);
-
-				for(Object c : chapters) {
-					temp = (JSONObject)c;
-					JSONObject dim = (JSONObject)((JSONObject)temp.get("dimensions")).get("tve_2");
-					JSONArray annotations = (JSONArray)dim.get("annotations");
-					for(Object a : annotations) {
-						temp = (JSONObject)a;
-						posters.add(temp.get("poster").toString());
+		try {
+			Object obj = JSONValue.parse(data);
+		
+			JSONObject jsonObject = (JSONObject)obj;
+			System.out.println(jsonObject.getClass());
+			JSONObject temp = null;
+			for(Iterator i1 = jsonObject.keySet().iterator(); i1.hasNext();) {
+				String key = (String) i1.next();
+				if (key.equals("chapters")) {
+					JSONArray chapters = (JSONArray)jsonObject.get(key);
+	
+					for(Object c : chapters) {
+						temp = (JSONObject)c;
+						JSONObject dim = (JSONObject)((JSONObject)temp.get("dimensions")).get("tve_2");
+						JSONArray annotations = (JSONArray)dim.get("annotations");
+						for(Object a : annotations) {
+							temp = (JSONObject)a;
+							posters.add(temp.get("poster").toString());
+						}
 					}
 				}
 			}
+		} catch (Exception e) {
+			System.out.println("Could not load date from Editor Tool:"+e.getStackTrace());
 		}
 	}
 	

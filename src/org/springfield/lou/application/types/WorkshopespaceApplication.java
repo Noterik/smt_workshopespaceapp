@@ -161,6 +161,11 @@ public class WorkshopespaceApplication extends Html5Application {
     		return;
     	}
     	
+    	if (tour == null) {
+    		//no tour selected yet
+    		return; 
+    	}
+    	
     	int position = Integer.parseInt(parts[0]);
     	String d = tour.getCurrentPresentation().getVideo(language).getRaw(quality).getProperty("duration");
     	double duration = Double.parseDouble(d);
